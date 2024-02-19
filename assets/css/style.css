@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.txt-line {
+    position: relative;
+}
+
+.txt-line::after {
+    content: "";
+    width: 200px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    position: absolute;
+    bottom: -30px;
+    border-radius: 50px;
+    left: 50%;
+}
