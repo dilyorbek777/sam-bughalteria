@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+</head>
+
+<body>
+
+
+    <!-- start Navbar  -->
+    <div class="bg-gradient-to-b from-[#2F97D1] via-[#2f42d1]  to-black">
+        <a href="tel:+997xx*xx*x"
+            class="fixed w-20 h-20 rounded-full shadow-md shadow-white bg-white bottom-5 right-5 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-10 h-10 text-[#2f42d1]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+            </svg>
+
+        </a>
+        <nav class="w-full">
+            <div class="max-w-[1440px] mx-auto py-4 flex items-center justify-between">
+                <div class="flex">
+                    <img src="/assets/images/logo.png" width="30" alt="">
+                </div>
+                <ul class="flex items-center justify-center gap-7 ">
+                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Home</a></li>
+                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Xizmatlarimiz</a>
+                    </li>
+                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Biz haqimizda</a>
+                    </li>
+                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Aloqa</a></li>
+                    <li><a class="text-white font-bold hover:border-white hover:underline flex items-center  gap-3"
+                            href="/login.html">Kirish <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end Navbar  -->
+
+        <div class="max-w-[1440px] flex-col h-screen mx-auto py-4 flex items-center justify-center">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm  flex justify-center items-center">
+                <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-100">Sign Up</h2>
+            </div>
+            <form class="space-y-6 w-1/2 mx-auto" action="#" method="POST" id="signup">
+                <div>
+                    <label for="email" class="block text-sm font-medium leading-6  text-gray-100">Email
+                        address</label>
+                    <div class="mt-2">
+                        <input id="email" name="email" type="email" autocomplete="email" required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="password"
+                            class="block text-sm font-medium leading-6  text-gray-100">Username</label>
+
+                    </div>
+
+                    <div class="mt-2">
+                        <input id="username" name="username" type="text" autocomplete="current-password" required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 outline-none ">
+                    </div>
+
+                </div>
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="create" class="block text-sm font-medium leading-6  text-gray-100">Create
+                            Password</label>
+
+                    </div>
+
+                    <div class="mt-2">
+                        <input id="create" name="password1" type="password" autocomplete="current-password" required
+                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 outline-none">
+                    </div>
+
+                </div>
+
+
+                <div>
+                    <button type="submit"
+                        class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Sign up
+                    </button>
+                </div>
+            </form>
+            <p class="mt-10 text-center text-sm text-gray-100">
+                Already have account?
+                <a class='font-semibold leading-6 text-indigo-200 hover:text-indigo-500' href='/'>Log in</a>
+            </p>
+        </div>
+
+        <!-- footer -->
+        <div class="w-full bg-gray-500">
+            <footer class="max-w-[1440px] mx-auto py-14 flex items-center justify-between   text-white">
+                <h3 class="text-3xl font-semibold">Created by Developer 23 O5</h3>
+                <div class="flex items-center justify-center gap-3">
+
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                        </svg>
+
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+
+                    </a>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
