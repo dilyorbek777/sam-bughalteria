@@ -12,10 +12,7 @@ form.addEventListener("change", (e) => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    let data = contact("contact-us", req)
-
-    console.log(data);
-
+    contact("contact-us", req)
 })
 
 const contact = async (url, options) => {
@@ -27,5 +24,9 @@ const contact = async (url, options) => {
         },
     }).then(d => d.json())
 
-    return res
+    console.log(res);
+
+    if (res) {
+        alert("Sizga tez orada bog'laniladi!")
+    }
 }
