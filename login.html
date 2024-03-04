@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign in </title>
     <link rel="stylesheet" href="/assets/css/tailwind.css">
 </head>
 
@@ -23,34 +23,70 @@
 
         </a>
         <nav class="w-full">
-            <div class="max-w-[1440px] mx-auto py-4 flex items-center justify-between">
+            <div class="max-w-[1440px] mx-auto py-4 flex items-center justify-between px-5">
                 <div class="flex">
                     <img src="/assets/images/logo.png" width="30" alt="">
                 </div>
-                <ul class="flex items-center justify-center gap-7 ">
+                <ul id="links" class="flex items-center justify-center gap-7  max-lg:hidden">
                     <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Home</a></li>
-                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Xizmatlarimiz</a>
+                    <li><a class="text-white font-bold hover:border-white hover:underline"
+                            href="/service.html">Xizmatlarimiz</a>
                     </li>
-                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Biz haqimizda</a>
+                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/about.html">Biz
+                            haqimizda</a>
                     </li>
-                    <li><a class="text-white font-bold hover:border-white hover:underline" href="/">Aloqa</a></li>
+                    <li><a class="text-white font-bold hover:border-white hover:underline"
+                            href="/contact.html">Aloqa</a></li>
                     <li><a class="text-white font-bold hover:border-white hover:underline flex items-center  gap-3"
-                            href="/login.html">Kirish <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            href="/login.html">Admin <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                             </svg>
                         </a></li>
+                    <div id="xbar" class="text-white hidden max-lg:flex ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+
+                    </div>
                 </ul>
+                <div class="hidden max-lg:flex" id="bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+                    </svg>
+                </div>
+
             </div>
         </nav>
+
+        <script>
+            let bar = document.getElementById("bar")
+            let links = document.getElementById("links")
+            let xbar = document.getElementById("xbar")
+            console.log(bar);
+
+            bar.addEventListener("click", (e) => {
+                links.className = 'flex items-center justify-center gap-7 flex-col fixed w-full h-screen bg-black top-0 left-0 max-lg:flex'
+                xbar.className = 'absolute top-2 right-2 text-white px-5 py-4 '
+            })
+
+            xbar.addEventListener("click", () => {
+                links.className = 'flex items-center justify-center gap-7  max-lg:hidden'
+                xbar.className = 'hidden max-lg:flex'
+            })
+        </script>
+
         <!-- end Navbar  -->
 
         <div class="max-w-[1440px] flex-col h-screen mx-auto py-4 flex items-center justify-center">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm  flex justify-center items-center">
-                <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-100">Sign Up</h2>
+                <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-100">Sign in</h2>
             </div>
-            <form class="space-y-6 w-1/2 mx-auto" action="#" method="POST" id="signup">
+            <form class="space-y-6 w-1/2 mx-auto" action="#" method="POST" id="signin">
                 <div>
                     <label for="email" class="block text-sm font-medium leading-6  text-gray-100">Email
                         address</label>
@@ -81,7 +117,7 @@
                     </div>
 
                     <div class="mt-2">
-                        <input id="create" name="password1" type="password" autocomplete="current-password" required
+                        <input id="create" name="password" type="password" autocomplete="current-password" required
                             class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 outline-none">
                     </div>
 
@@ -91,19 +127,22 @@
                 <div>
                     <button type="submit"
                         class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Sign up
+                        Sign in
                     </button>
                 </div>
             </form>
             <p class="mt-10 text-center text-sm text-gray-100">
-                Already have account?
-                <a class='font-semibold leading-6 text-indigo-200 hover:text-indigo-500' href='/'>Log in</a>
+                Akkaunt yo'qmi? Unda yarating
+                <a class='font-semibold leading-6 text-indigo-200 hover:text-indigo-500' href='/sign-up.html'>Sign
+                    up</a>
             </p>
         </div>
 
         <!-- footer -->
+
         <div class="w-full bg-gray-500">
-            <footer class="max-w-[1440px] mx-auto py-14 flex items-center justify-between   text-white">
+            <footer
+                class="max-w-[1440px] mx-auto py-14 flex items-center justify-between   text-white max-lg:flex-col gap-5">
                 <h3 class="text-3xl font-semibold">Created by Developer 23 O5</h3>
                 <div class="flex items-center justify-center gap-3">
 
@@ -136,7 +175,7 @@
             </footer>
         </div>
     </div>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/log.js"></script>
 </body>
 
 </html>
